@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="views.EditarProductoController" alignment="CENTER">
+    
+    <padding>
+        <Insets top="20" left="20" bottom="20" right="20"/>
+    </padding>
+    
+    <TextField fx:id="txtId" promptText="ID" disable="true"/>
+    <TextField fx:id="txtNombre" promptText="Nombre"/>
+    <TextField fx:id="txtPrecio" promptText="Precio"/>
+
+    <Label text="Tipo original del producto (no editable):"/>
+    <Label fx:id="lblTipoProducto"/>
+
+    <VBox fx:id="vboxEspecifico" spacing="5"/>
+
+    <Button text="Guardar" onAction="#onGuardar"/>
+    <Button text="Cancelar" onAction="#onCancelar"/>
+</VBox>

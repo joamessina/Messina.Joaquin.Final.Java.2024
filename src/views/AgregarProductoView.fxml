@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox spacing="10"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="views.AgregarProductoController"
+      alignment="CENTER">
+
+    <padding>
+        <Insets top="20" left="20" bottom="20" right="20"/>
+    </padding>
+
+    <TextField fx:id="txtNombre" promptText="Nombre"/>
+    <TextField fx:id="txtPrecio" promptText="Precio"/>
+
+    <Label text="Tipo:"/>
+    <HBox spacing="10">
+        <RadioButton text="Alimento" fx:id="rbAlimento"/>
+        <RadioButton text="Electrónico" fx:id="rbElectronico"/>
+        <RadioButton text="Ropa" fx:id="rbRopa"/>
+    </HBox>
+
+    <VBox fx:id="vboxEspecifico" spacing="5"/>
+
+    <Button text="Agregar" onAction="#onAgregar"/>
+    <Button text="Cancelar" onAction="#onCancelar"/>
+</VBox>

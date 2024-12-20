@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<VBox spacing="10" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="views.MainViewController">
+
+    <MenuBar>
+        <Menu text="Archivo">
+            <MenuItem text="Cargar CSV" onAction="#onCargarCSV"/>
+            <MenuItem text="Guardar CSV" onAction="#onGuardarCSV"/>
+            <MenuItem text="Cargar JSON" onAction="#onCargarJSON"/>
+            <MenuItem text="Guardar JSON" onAction="#onGuardarJSON"/>
+            <MenuItem text="Serializar" onAction="#onSerializar"/>
+            <MenuItem text="Deserializar" onAction="#onDeserializar"/>
+            <MenuItem text="Exportar TXT" onAction="#onExportarTXT"/>
+        </Menu>
+        <Menu text="Productos">
+            <MenuItem text="Agregar Producto" onAction="#onAgregarProducto"/>
+            <MenuItem text="Editar Producto" onAction="#onEditarProducto"/>
+            <MenuItem text="Eliminar Producto" onAction="#onEliminarProducto"/>
+        </Menu>
+        <Menu text="Operaciones">
+            <MenuItem text="Ordenar por Nombre" onAction="#onOrdenarPorNombre"/>
+            <MenuItem text="Ordenar por Precio" onAction="#onOrdenarPorPrecio"/>
+            <MenuItem text="Filtrar Precio menor que 50" onAction="#onFiltrarPrecio"/>
+            <MenuItem text="Filtrar Alimentos" onAction="#onFiltrarAlimentos"/>
+            <MenuItem text="Incrementar Precios" onAction="#onIncrementarPrecios"/>
+            <MenuItem text="Descuento Alimentos" onAction="#onDescuentoAlimentos"/>
+        </Menu>
+    </MenuBar>
+
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn text="ID" fx:id="colId"/>
+            <TableColumn text="Nombre" fx:id="colNombre"/>
+            <TableColumn text="Precio" fx:id="colPrecio"/>
+        </columns>
+    </TableView>
+</VBox>
